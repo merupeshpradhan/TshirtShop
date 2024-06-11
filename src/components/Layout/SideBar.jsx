@@ -1,8 +1,9 @@
 import React from "react";
 import { TfiAngleRight } from "react-icons/tfi";
 import { BsDash } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
-function SideBar() {
+function SideBar({ pathname }) {
   return (
     <>
       <section className="w-[20%] lg:block md:block hidden">
@@ -13,7 +14,7 @@ function SideBar() {
               <span>
                 <TfiAngleRight />
               </span>
-              <span>New</span>
+              <span>{pathname}</span>
             </div>
             <div className="flex flex-col justify-center items-start gap-4">
               <div className="flex w-full justify-center">
@@ -21,12 +22,17 @@ function SideBar() {
                   Browser By
                 </span>
               </div>
-              <span className="font-light">All Products</span>
-              <span className="font-light">Men</span>
-              <span className="font-light">New Drops</span>
-              <span className="font-light">Women</span>
+              <span className="font-light cursor-pointer">
+                {" "}
+                <NavLink to={"/AllProducts"}>All Products</NavLink>
+              </span>
+              <span className="font-light cursor-pointer"><NavLink to={"/men"}>Men</NavLink></span>
+              <span className="font-light cursor-pointer">
+                <NavLink to={"/new"}>New Drops</NavLink>
+              </span>
+              <span className="font-light cursor-pointer"><NavLink to={"/women"}>Women</NavLink></span>
             </div>
-            <div className="flex flex-col justify-center items-start gap-4 border-b">
+            <div className="flex flex-col justify-center items-start gap-4 border-b cursor-pointer">
               <div className="flex w-full justify-center">
                 <span className="text-xl font-normal border-b w-[100%] py-2">
                   Filter By

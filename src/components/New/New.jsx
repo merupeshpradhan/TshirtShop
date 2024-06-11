@@ -1,14 +1,13 @@
 import React from "react";
-
-import SideBar from "./SideBar";
 import NewDrops from "./NewDrops";
+import SideBar from "../Layout/SideBar";
 
 function New() {
   return (
     <>
       <section className="flex justify-evenly">
-        <SideBar />
-        <NewDrops/>
+        <SideBar pathname="New Drops"/>
+        <NewDrops />
       </section>
     </>
   );
