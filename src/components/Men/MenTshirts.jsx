@@ -1,15 +1,15 @@
-import { React, useRef } from "react";
+import React, { useRef } from "react";
 import boysTshirt1 from "../../images/boysTshirt1.webp";
 import boysTshirt2 from "../../images/boysTshirt2.webp";
 import boysTshirt3 from "../../images/boysTshirt3.webp";
 import boysTshirt4 from "../../images/boysTshirt4.webp";
-import womenTshirt6 from "../../images/womenTshirt6.webp";
-import womenTshirt8 from "../../images/womenTshirt8.webp";
-import womenTshirt2 from "../../images/womenTshirt2.webp";
-import womenTshirt7 from "../../images/womenTshirt7.webp";
+import boysTshirt5 from "../../images/boysTshirt5.webp";
+import boysTshirt6 from "../../images/boysTshirt6.webp";
+import boysTshirt7 from "../../images/boysTshirt7.webp";
+import boysTshirt8 from "../../images/boysTshirt8.webp";
 import { motion, useInView } from "framer-motion";
 
-function NewDrops() {
+function MenTshirts() {
   // ref for each div
   const refh1 = useRef(null);
   const refDiv = useRef(null);
@@ -23,11 +23,12 @@ function NewDrops() {
     { name: "I'm a product", src: boysTshirt2, price: "$15.00" },
     { name: "I'm a product", src: boysTshirt3, price: "$15.00" },
     { name: "I'm a product", src: boysTshirt4, price: "$15.00" },
-    { name: "I'm a product", src: womenTshirt6, price: "$15.00" },
-    { name: "I'm a product", src: womenTshirt8, price: "$15.00" },
-    { name: "I'm a product", src: womenTshirt2, price: "$15.00" },
-    { name: "I'm a product", src: womenTshirt7, price: "$15.00" },
+    { name: "I'm a product", src: boysTshirt5, price: "$15.00" },
+    { name: "I'm a product", src: boysTshirt6, price: "$15.00" },
+    { name: "I'm a product", src: boysTshirt7, price: "$15.00" },
+    { name: "I'm a product", src: boysTshirt8, price: "$15.00" },
   ];
+
   return (
     <>
       <section className="lg:w-[70%] md:w-[70%] w-full px-6 flex flex-col">
@@ -39,7 +40,7 @@ function NewDrops() {
             animate={{ opacity: h1View ? 1 : 0 }}
             transition={{ delay: 0.3, duration: 1.5 }}
           >
-            New Drops
+            Men
           </motion.h1>
         </div>
         <div className="flex justify-center items-center">
@@ -80,4 +81,4 @@ function NewDrops() {
   );
 }
 
-export default NewDrops;
+export default MenTshirts;

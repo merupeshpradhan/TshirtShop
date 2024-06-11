@@ -1,15 +1,15 @@
 import { React, useRef } from "react";
-import boysTshirt1 from "../../images/boysTshirt1.webp";
-import boysTshirt2 from "../../images/boysTshirt2.webp";
-import boysTshirt3 from "../../images/boysTshirt3.webp";
-import boysTshirt4 from "../../images/boysTshirt4.webp";
-import womenTshirt6 from "../../images/womenTshirt6.webp";
-import womenTshirt8 from "../../images/womenTshirt8.webp";
+import womenTshirt1 from "../../images/womenTshirt1.webp";
 import womenTshirt2 from "../../images/womenTshirt2.webp";
+import womenTshirt3 from "../../images/womenTshirt3.webp";
+import womenTshirt4 from "../../images/womenTshirt4.webp";
+import womenTshirt5 from "../../images/womenTshirt5.webp";
+import womenTshirt6 from "../../images/womenTshirt6.webp";
 import womenTshirt7 from "../../images/womenTshirt7.webp";
+import womenTshirt8 from "../../images/womenTshirt8.webp";
 import { motion, useInView } from "framer-motion";
 
-function NewDrops() {
+function WomenTshirts() {
   // ref for each div
   const refh1 = useRef(null);
   const refDiv = useRef(null);
@@ -19,15 +19,16 @@ function NewDrops() {
   const DivView = useInView(refDiv, { once: true });
 
   const products = [
-    { name: "I'm a product", src: boysTshirt1, price: "$15.00" },
-    { name: "I'm a product", src: boysTshirt2, price: "$15.00" },
-    { name: "I'm a product", src: boysTshirt3, price: "$15.00" },
-    { name: "I'm a product", src: boysTshirt4, price: "$15.00" },
     { name: "I'm a product", src: womenTshirt6, price: "$15.00" },
     { name: "I'm a product", src: womenTshirt8, price: "$15.00" },
     { name: "I'm a product", src: womenTshirt2, price: "$15.00" },
-    { name: "I'm a product", src: womenTshirt7, price: "$15.00" },
+    { name: "I'm a product", src: womenTshirt7, price: "$15.00" },  
+    { name: "I'm a product", src: womenTshirt4, price: "$15.00" },
+    { name: "I'm a product", src: womenTshirt1, price: "$15.00" },
+    { name: "I'm a product", src: womenTshirt3, price: "$15.00" },
+    { name: "I'm a product", src: womenTshirt5, price: "$15.00" },
   ];
+
   return (
     <>
       <section className="lg:w-[70%] md:w-[70%] w-full px-6 flex flex-col">
@@ -39,7 +40,7 @@ function NewDrops() {
             animate={{ opacity: h1View ? 1 : 0 }}
             transition={{ delay: 0.3, duration: 1.5 }}
           >
-            New Drops
+            Women
           </motion.h1>
         </div>
         <div className="flex justify-center items-center">
@@ -80,4 +81,4 @@ function NewDrops() {
   );
 }
 
-export default NewDrops;
+export default WomenTshirts;
